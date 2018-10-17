@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "193030050648",
+    "firebase_url": "https://awesome-places-f85cb.firebaseio.com",
+    "project_id": "awesome-places-f85cb",
+    "storage_bucket": "awesome-places-f85cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193030050648:android:3b7cca70b554b57d",
+        "android_client_info": {
+          "package_name": "com.rodrigues.pedroschwarz.awesomeplaces"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193030050648-ppb7knoi4sb6esdd71smmvq2hfem87l6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rodrigues.pedroschwarz.awesomeplaces",
+            "certificate_hash": "3a9681a5cd88f74ee6749f714508d90d910ccca3"
+          }
+        },
+        {
+          "client_id": "193030050648-bn9cfp03a7fldb08g3gsfv98eijk6hqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbEtXfJEcj_01xTPa9hJ5G1KovSWvTWLY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193030050648-bn9cfp03a7fldb08g3gsfv98eijk6hqb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
