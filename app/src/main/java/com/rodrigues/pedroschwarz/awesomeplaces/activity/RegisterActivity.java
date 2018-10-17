@@ -20,7 +20,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.rodrigues.pedroschwarz.awesomeplaces.R;
@@ -29,7 +28,6 @@ import com.rodrigues.pedroschwarz.awesomeplaces.helper.DatabaseHelper;
 import com.rodrigues.pedroschwarz.awesomeplaces.helper.StorageHelper;
 import com.rodrigues.pedroschwarz.awesomeplaces.model.User;
 import com.theartofdev.edmodo.cropper.CropImage;
-import com.theartofdev.edmodo.cropper.CropImageActivity;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -114,9 +112,9 @@ public class RegisterActivity extends AppCompatActivity {
                 } else {
                     // Handle errors
                     String error = "";
+                    // Disable ProgressBar
+                    regProg.setVisibility(View.GONE);
                     try {
-                        // Disable ProgressBar
-                        regProg.setVisibility(View.GONE);
                         throw task.getException();
                     } catch (FirebaseAuthUserCollisionException e) {
                         error = "This email is already in use.";
