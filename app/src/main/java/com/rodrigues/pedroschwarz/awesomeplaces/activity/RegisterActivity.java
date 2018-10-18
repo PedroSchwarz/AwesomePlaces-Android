@@ -133,7 +133,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void storeImage() {
         // Get storage profile reference
-        final StorageReference profilePath = StorageHelper.getPathStorage("profile_images/" + AuthHelper.getUserUid() + ".jpg");
+        final StorageReference profilePath = StorageHelper.getPathStorage(StorageHelper.getUserImagePath());
         // Store image
         profilePath.putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
             @Override

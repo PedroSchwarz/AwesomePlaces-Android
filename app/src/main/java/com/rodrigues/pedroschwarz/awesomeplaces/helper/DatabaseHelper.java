@@ -13,4 +13,8 @@ public class DatabaseHelper {
         return getRootRef().collection("Users");
     }
 
+    public static CollectionReference getPlacesRef() {
+        return getRootRef().collection("Places");
+    }
+
 }
