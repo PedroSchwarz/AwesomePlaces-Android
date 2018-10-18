@@ -1,5 +1,7 @@
 package com.rodrigues.pedroschwarz.awesomeplaces.model;
 
+import com.google.firebase.firestore.Exclude;
+
 import java.util.Calendar;
 
 public class User {
@@ -47,6 +49,7 @@ public class User {
         this.email = email;
     }
 
+    @Exclude
     public String getPassword() {
         return password;
     }
