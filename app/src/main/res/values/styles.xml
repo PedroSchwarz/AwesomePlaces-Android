@@ -8,6 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.StatusBarOverlay">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
     <style name="AppTheme.ActionBarOverlay" parent="Base.ThemeOverlay.AppCompat.Dark" />
+
     <style name="AppTheme.PopoverOverlay" parent="Theme.AppCompat.Light" />
 </resources>

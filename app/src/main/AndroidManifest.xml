@@ -35,7 +35,11 @@
             android:name=".activity.NewPlaceActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".activity.PlaceActivity"></activity>
+        <activity
+            android:name=".activity.PlaceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme.StatusBarOverlay" />
     </application>
 
 </manifest>

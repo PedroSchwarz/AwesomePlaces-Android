@@ -20,6 +20,7 @@ import android.widget.ProgressBar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.rodrigues.pedroschwarz.awesomeplaces.R;
@@ -98,21 +99,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getPlaces() {
-        mainProg.setVisibility(View.VISIBLE);
-        DatabaseHelper.getPlacesRef().get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    places.clear();
-                    for (QueryDocumentSnapshot doc : task.getResult()) {
-                        Place place = doc.toObject(Place.class);
-                        places.add(place);
+        if (places.isEmpty()) {
+            mainProg.setVisibility(View.VISIBLE);
+        }
+        DatabaseHelper.getPlacesRef().orderBy("createdAt", Query.Direction.DESCENDING).get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            places.clear();
+                            for (QueryDocumentSnapshot doc : task.getResult()) {
+                                Place place = doc.toObject(Place.class);
+                                places.add(place);
+                            }
+                            adapter.notifyDataSetChanged();
+                            mainProg.setVisibility(View.GONE);
+                        }
                     }
-                    adapter.notifyDataSetChanged();
-                    mainProg.setVisibility(View.GONE);
-                }
-            }
-        });
+                });
     }
 
     private void logoutUser() {
