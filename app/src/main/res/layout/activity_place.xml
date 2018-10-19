@@ -41,6 +41,7 @@
         app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/place_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".activity.PlaceActivity">

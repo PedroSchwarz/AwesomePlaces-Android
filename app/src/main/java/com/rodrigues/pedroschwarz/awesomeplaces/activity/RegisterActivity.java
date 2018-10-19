@@ -93,7 +93,7 @@ public class RegisterActivity extends AppCompatActivity {
                         // Call register method
                         registerUser();
                     } else {
-                        Snackbar.make(regLayout, "You must chose a profile image.", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(regLayout, "You must choose a profile image.", Snackbar.LENGTH_LONG).show();
                     }
                 } else {
                     Snackbar.make(regLayout, "You must enter a username, email and password.", Snackbar.LENGTH_LONG).show();

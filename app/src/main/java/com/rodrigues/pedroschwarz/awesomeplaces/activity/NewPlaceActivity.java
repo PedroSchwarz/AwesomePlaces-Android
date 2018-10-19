@@ -97,10 +97,10 @@ public class NewPlaceActivity extends AppCompatActivity {
                             newPlaceProg.setVisibility(View.VISIBLE);
                             storeImage();
                         } else {
-                            Snackbar.make(newPlaceLayout, "You must chose a country.", Snackbar.LENGTH_LONG).show();
+                            Snackbar.make(newPlaceLayout, "You must choose a country.", Snackbar.LENGTH_LONG).show();
                         }
                     } else {
-                        Snackbar.make(newPlaceLayout, "You must chose a image.", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(newPlaceLayout, "You must choose a image.", Snackbar.LENGTH_LONG).show();
                     }
                 } else {
                     Snackbar.make(newPlaceLayout, "You must enter the title and description.", Snackbar.LENGTH_LONG).show();

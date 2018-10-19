@@ -1,6 +1,8 @@
 package com.rodrigues.pedroschwarz.awesomeplaces.activity;
 
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -48,6 +50,7 @@ public class PlaceActivity extends AppCompatActivity {
     private ImageView placeImage;
     private Toolbar placeToolbar;
 
+    private ConstraintLayout placeLayout;
     private CircleImageView placeAuthorImage;
     private TextView placeAuthorName;
     private TextView placeCreatedAt;
@@ -81,6 +84,7 @@ public class PlaceActivity extends AppCompatActivity {
         placeId = getIntent().getExtras().getString("placeId");
         placeTitle = getIntent().getExtras().getString("placeTitle");
 
+        placeLayout = findViewById(R.id.place_layout);
         placeImage = findViewById(R.id.place_image);
         placeToolbar = findViewById(R.id.place_toolbar);
 
@@ -173,7 +177,11 @@ public class PlaceActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String body = placeComBody.getText().toString();
-                createComment(body);
+                if (!(body.isEmpty())) {
+                    createComment(body);
+                } else {
+                    Snackbar.make(placeLayout, "You must write a comment.", Snackbar.LENGTH_LONG).show();
+                }
             }
         });
     }
