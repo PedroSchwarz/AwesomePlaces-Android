@@ -15,7 +15,8 @@ Firebase Firestore, Storage & auth - https://firebase.google.com/docs/android/se
 
 <h4>Login Screen</h4>
 <p>
-  Here the user can access it's account or go to the registration screen to create a new one.
+  Here the user can access it's account or go to the registration screen to create a new one. <br>
+  Thanks to @eberhardgross on Unsplash.com for the background image!
 </p>
 <p>
   <strong>*Uses</strong> Firebase Authentication  
